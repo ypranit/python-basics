@@ -1,5 +1,11 @@
-import requests
+try:
+    response = requests.get(
+        "https://api.github.com/users/ypranit"
+    )
 
-response = requests.get("https://api.github.com")
+    data = response.json()
 
-print(response.status_code)
+    print(data["followers"])
+
+except Exception as e:
+    print(e)
