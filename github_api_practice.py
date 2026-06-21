@@ -1,11 +1,4 @@
-try:
-    response = requests.get(
-        "https://api.github.com/users/ypranit"
-    )
+fruits = ["apple", "banana", "orange"]
 
-    data = response.json()
-
-    print(data["followers"])
-
-except Exception as e:
-    print(e)
+for fruit in fruits:
+    print(fruit)
